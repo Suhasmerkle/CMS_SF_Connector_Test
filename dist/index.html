@@ -24,6 +24,8 @@ for (let i = 0; i < 5; i++){
                     //Unix time: ${data.milliseconds_since_epoch}`
 
 }
+        
+        
         $(".mypanel").html(test);
 			
 			
@@ -63,18 +65,18 @@ for (let i = 0; i < 5; i++){
    
   
    <div class="mypanel"></div>
-    <script>
-  $(document).ready(function(){
-  $("img").click(function(){
-   var id = $(this).attr('id');
-      $("#text-input-id-1").val(id);
-  });
-});
-    </script>
+  
+  
+   <script>
 				
 
-				
-		
+				$(document).ready(function(){
+  $("img").click(function(){
+   var id = $(this).attr('id');      $("#text-input-id-1").val(id);
+    
+  });
+});
+		 </script>
 			<div class="slds-form-element">
 				<label class="slds-form-element__label" for="text-input-id-0"></label>
 				<div class="slds-form-element__control">
@@ -85,7 +87,7 @@ for (let i = 0; i < 5; i++){
 			<div class="slds-form-element">
 				<label class="slds-form-element__label" for="text-input-id-1">Image ID</label>
 				<div class="slds-form-element__control">
-					<input type="text" id="text-input-id-1" class="slds-input" placeholder="e.g. 167, 718 etc. whatever ID is infront of Name" />
+					<input type="text" id="text-input-id-1" value="" class="slds-input" placeholder="e.g. 167, 718 etc. whatever ID is infront of Name" />
 				</div>
 			</div>
 			<div class="slds-form-element">
