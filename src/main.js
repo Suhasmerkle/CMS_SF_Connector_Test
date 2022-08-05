@@ -80,7 +80,7 @@ sdk.getData(function (data) {
 	imgcall();
 });
 
-document.getElementById('workspace').addEventListener("change", function () {
+document.getElementById('text-input-id-1').addEventListener("change", function () {
 	debounce(paintMap, 500)();
 	paintSliderValues();
 });
