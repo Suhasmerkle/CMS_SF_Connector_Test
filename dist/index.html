@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>test api</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+</head>
+
+<body>
+<article class="slds-card">
+    
+    <script>
+    $.getJSON('https://62e4133ac6b56b45118193ca.mockapi.io/assets', function(data) {
+	var test = ""
+for (let i = 0; i < 5; i++){
+        //var text = `Date: ${data[i].avatar}<br>`
+		url = `${data[i].avatar}`
+		l = url.split('/', -1)[6]
+		l = l.split('.',-1)[0]
+		console.log(l)
+		 test = test + (`<img id = "${l}" src = ${data[i].avatar}>
+					Name: ${data[i].name}
+					ID: ${l}<br>`)
+                    //Time: ${data.time}<br>
+                    //Unix time: ${data.milliseconds_since_epoch}`
+
+}
+        $(".mypanel").html(test);
+			
+			
+    });
+	
+
+	
+    </script>
+	
+	 <div class="slds-card__header slds-grid">
+    <header class="slds-media slds-media_center slds-has-flexi-truncate">
+      <div class="slds-media__figure">
+        <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+          <svg class="slds-icon slds-icon_small" aria-hidden="true">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/standard-sprite/svg/symbols.svg#contact" />
+          </svg>
+        </span>
+      </div>
+      <div class="slds-media__body">
+        <h2>
+          <a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
+            <span class="slds-text-heading_small">Test App</span>
+          </a>
+        </h2>
+      </div>
+    </header>
+	
+  </div>
+  
+
+	
+	
+	
+	<div class="slds-card__body slds-card__body_inner">
+  <div id="workspace">
+  
+   
+  
+   <div class="mypanel"></div>
+  
+  
+  
+				
+
+				
+		
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="text-input-id-0"></label>
+				<div class="slds-form-element__control">
+					<input type="hidden" id="text-input-id-0" class="slds-input" placeholder="" />
+					
+				</div>
+			</div>
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="text-input-id-1">Image ID</label>
+				<div class="slds-form-element__control">
+					<input type="text" id="text-input-id-1" class="slds-input" placeholder="e.g. 167, 718 etc. whatever ID is infront of Name" />
+				</div>
+			</div>
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="slider-id-01">
+					<span class="slds-slider-label">
+						<span class="slds-slider-label__label">Image Size</span>
+					</span>
+				</label>
+				<div class="slds-form-element__control">
+					<div class="slds-slider">
+						<input type="range" id="slider-id-01" class="slds-slider__range" value="200" min="100" max="800" />
+						<span class="slds-slider__value" id="slider-id-01-val" aria-hidden="true">200</span>
+					</div>
+				</div>
+			</div>	    
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="slider-id-02">
+					<span class="slds-slider-label">
+						<span class="slds-slider-label__label"></span>
+					</span>
+				</label>
+				<div class="slds-form-element__control">
+					<div class="slds-slider">
+						<input type="hidden" id="slider-id-02" class="slds-slider__range" value="200" min="100" max="800" />
+						<span class="slds-slider__value" id="slider-id-02-val" aria-hidden="true"></span>
+					</div>
+				</div>
+			</div>
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="slider-id-03">
+					<span class="slds-slider-label">
+						<span class="slds-slider-label__label"></span>
+					</span>
+				</label>
+				<div class="slds-form-element__control">
+					<div class="slds-slider">
+						<input type="hidden" id="slider-id-03" class="slds-slider__range" value="10" min="1" max="20" />
+						<span class="slds-slider__value"id="slider-id-03-val" aria-hidden="true"></span>
+					</div>
+				</div>
+			</div>
+			<div class="slds-form-element">
+				<label class="slds-form-element__label" for="text-input-id-2"></label>
+				<div class="slds-form-element__control">
+					<input type="hidden" id="text-input-id-2" class="slds-input" placeholder="Optional url for Link wrap" />
+				</div>
+			</div>
+		</div>
+  </div>
+  <footer class="slds-card__footer">For use in Salesforce Marketing Cloud block SDK demos only</footer>
+</article>
+		
+		<script src="./main.js"></script>
+	</body>
+
+</html>
