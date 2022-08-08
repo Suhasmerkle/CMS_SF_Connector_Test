@@ -17,7 +17,7 @@ for (let i = 0; i < 5; i++){
 		l = url.split('/', -1)[6]
 		l = l.split('.',-1)[0]
 		console.log(l)
-		 test = test + (`<img id = "${l}" src = ${data[i].avatar}><br>
+		 test = test + (`<img id = "${l}" src = ${data[i].avatar} class="img_click"><br>
 					Name: ${data[i].name}<br>
 					ID: ${l}<br>`)
                     //Time: ${data.time}<br>
@@ -63,15 +63,12 @@ for (let i = 0; i < 5; i++){
    
   
    <div class="mypanel"></div>
-	   <script>			
-
-$(document).ready(function(){
-  $("img").click(function(){
+	   <script>
+  $(".img_click").click(function(){
    var id = $(this).attr('id'); 
 $("#text-input-id-1").val(id);    
   });
-});
-		 </script>
+	  </script>
   
   
   
