@@ -17,8 +17,8 @@ for (let i = 0; i < 5; i++){
 		l = url.split('/', -1)[6]
 		l = l.split('.',-1)[0]
 		console.log(l)
-		 test = test + (`<img id = "${l}" src = ${data[i].avatar}>
-					Name: ${data[i].name}
+		 test = test + (`<img id = "${l}" src = ${data[i].avatar}><br>
+					Name: ${data[i].name}<br>
 					ID: ${l}<br>`)
                     //Time: ${data.time}<br>
                     //Unix time: ${data.milliseconds_since_epoch}`
@@ -89,7 +89,7 @@ $("#text-input-id-1").val(id);
 			<div class="slds-form-element">
 				<label class="slds-form-element__label" for="text-input-id-1">Image ID</label>
 				<div class="slds-form-element__control">
-					<input type="text" id="text-input-id-1" class="slds-input" placeholder="e.g. 167, 718 etc. whatever ID is infront of Name" />
+					<input type="text" id="text-input-id-1" value="" class="slds-input" placeholder="e.g. 167, 718 etc. whatever ID is infront of Name" />
 				</div>
 			</div>
 			<div class="slds-form-element">
